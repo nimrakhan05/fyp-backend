@@ -3,7 +3,7 @@ const generateToken = require('../utils/jwtUtils');
 
 
 // Login user
-const loginUser = async (req, res, next) => {
+exports.loginUser = async (req, res, next) => {
   const { email, password } = req.body;
 
   try {
@@ -22,5 +22,3 @@ const loginUser = async (req, res, next) => {
     next(error);
   }
 };
-
-module.exports = {  loginUser };
